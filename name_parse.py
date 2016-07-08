@@ -33,23 +33,15 @@ class NameParse(object):
                             newstr = ' '.join(words[:-2])
                     else:
                         newstr = ' '.join(words[words.index(jobtil[0])+1:])
-                parsed_name = pp.parse(newstr)
-                for i in parsed_name:
-                    if i[1] == 'Surname':
-                        last_name = i[0].strip(',')
-                    elif i[1] == 'GivenName':
-                        first_name = i[0]
-                    else:
-                        pass
-                self.parsed_name = (first_name, last_name.replace('.', '. '))
+                self.ppname(newstr)
+                
 
             else:
-                parsed_name = pp.parse(name)
-                for i in parsed_name:
-                    if i[1] == 'Surname':
-                        last_name = i[0].strip(',')
-                    elif i[1] == 'GivenName':
-                        first_name = i[0]
-                    else:
-                        pass
-                self.parsed_name = (first_name, last_name.replace('.', '. '))
+                self.ppname(name)
+                
+    def ppname(self, text):
+        parsed_name = pp.parse(text)
+        inv_parsed_name = {v: k for k, v in dict(parsed_name).items()}
+        first_name = inv_parsed_name['GivenName']
+        last_name = inv_parsed_name['Surname'].strip(',')
+        self.parsed_name = (first_name, last_name.replace('.', '. '))

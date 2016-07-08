@@ -10,7 +10,7 @@ run the following to test:
 $ pip install pytest
 $ py.test -v test_name_parsing.py
 '''
-from name_parse_try import NameParse
+from name_parse import NameParse
 
 
 class TestNameParsing:
