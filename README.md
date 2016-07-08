@@ -47,7 +47,7 @@ To Label:
    ```
    parserator label newpeople.csv name_data/labeled/labeled.xml probablepeople
     ```  
-Labeling example: (there's a list for tag with numbers to choose from, i.e. GivenName -2, SurName -6, please refer to labling.txt for more details how I lable them)
+Labeling example: (there's a list for tag with numbers to choose from, i.e. GivenName -2, SurName -6, please refer to labeling.txt for more details how I lable them)
    ```
    STRING: serena van der woodsen
   | serena  | GivenName |
