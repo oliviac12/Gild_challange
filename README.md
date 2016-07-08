@@ -31,40 +31,40 @@ if no error pops up and you see something like this
 then we are half way there!
 
  4. Label new data. In this Gild_challengage folder, there's raw csv called newpeople.csv. That's the new data we want to add. Based on the note in [probablepeople](https://github.com/datamade/probablepeople)'s page, parserator doesn't need a lot of new example to learn about the new label. This is what the data looks like in the newpeople.csv
-```
-Molly Scott
-Steven St.Claire
-Naini Mistry
-mistry naini
-St.Claire steven
-scott molly
-stephanie scott
-scott stephsnie
-aaron david von mangum
-serena van der woodsen
-```
+  ```
+  Molly Scott
+  Steven St.Claire
+  Naini Mistry
+  mistry naini
+  St.Claire steven
+  scott molly
+  stephanie scott
+  scott stephsnie
+  aaron david von mangum
+  serena van der woodsen
+  ```
 To Label:
    ```
    parserator label newpeople.csv name_data/labeled/labeled.xml probablepeople
     ```  
-Labeling example: (there's a list for tag with numbers to choose from, i.e. GivenName -2, SurName -6)
- ```
- STRING: serena van der woodsen
-| serena  | GivenName |
-| van     | Surname   |
-| der     | Surname   |
-| woodsen | Surname   |
-Is this correct? (y)es / (n)o / (s)kip / (f)inish tagging / (h)elp
-n
-What is 'serena' ? If GivenName hit return
-
-What is 'van' ? If Surname hit return
-4
-What is 'der' ? If Surname hit return
-4
-What is 'woodsen' ? If Surname hit return
-6
-```
+Labeling example: (there's a list for tag with numbers to choose from, i.e. GivenName -2, SurName -6, please refer to labling.txt for more details how I lable them)
+   ```
+   STRING: serena van der woodsen
+  | serena  | GivenName |
+  | van     | Surname   |
+  | der     | Surname   |
+  | woodsen | Surname   |
+  Is this correct? (y)es / (n)o / (s)kip / (f)inish tagging / (h)elp
+  n
+  What is 'serena' ? If GivenName hit return
+  
+  What is 'van' ? If Surname hit return
+  4
+  What is 'der' ? If Surname hit return
+  4
+  What is 'woodsen' ? If Surname hit return
+  6
+  ```
  5. Re-train and use it! 
 ```
 train name_data/labeled/labeled.xml probablepeople
