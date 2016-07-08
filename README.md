@@ -1,8 +1,10 @@
-# Gild_challange
+## Gild_challange
 
-I was able to pass all the test in the test set. I was using this moudule called [probablepeople](https://github.com/datamade/probablepeople) becasue it uses uses [parserator](https://github.com/datamade/parserator), a library for making and improving probabilistic parsers - specifically, parsers that use python-crfsuite's implementation of conditional random fields.Therefore, I was able to customize and added more example and train the moudule. However, the train function in the most updated version of probablepeople is broken, so in order to get what I got, please bare with me and do the following step set up the moudule. 
+I was able to pass all the test in the test set. I was using this moudule called [probablepeople](https://github.com/datamade/probablepeople) becasue it uses uses [parserator](https://github.com/datamade/parserator), a library for making and improving probabilistic parsers - specifically, parsers that use python-crfsuite's implementation of conditional random fields.Therefore, I was able to customize and added more example and train the moudule. 
+**However, the train function in the most updated version of probablepeople is broken, so in order to get what I got, please bare with me and do the following step set up the moudule.**
 
 ## How to set up probablepeople and train the new examples
+
  1. In the terminal, git clone, and set it to this specific commit number 6cb9f7ecc6d77496c580359cb63dd38ddfab3ae9
    
     ```
@@ -11,16 +13,15 @@ I was able to pass all the test in the test set. I was using this moudule called
    git reset --hard 6cb9f7ecc6d77496c580359cb63dd38ddfab3ae9
    pip install -r requirements.txt  
    python setup.py develop
-   
     ```  
  
-2. Another thing need to be fixed: downgrade the parserator to version 0.4.1 because the parserator installed with probablepepople is 5.0+ 
+ 2. Another thing need to be fixed: downgrade the parserator to version 0.4.1 because the parserator installed with probablepepople is  5.0+  only that specific commit number probablepeople and 0.4.1 parserator together works (ugh I know!) 
     ```
    pip unintall parserator
    pip intall parserator==0.4.1
     ```  
 
-3. Do a test train
+ 3. Do a test train
    ```
    parserator train name_data/labeled/labeled.xml,name_data/labeled/company_labeled.xml probablepeople
     ```  
@@ -29,7 +30,7 @@ if no error pops up and you see something like this
 "done training! model file created: probablepeople/learned_settings.crfsuite"
 then we are half way there!
 
-4. Label new data. In this Gild_challengage folder, there's raw csv called newpeople.csv. That's the new data we want to add. Based on the note in [probablepeople](https://github.com/datamade/probablepeople)'s page, parserator doesn't need a lot of new example to learn about the new label. This is what the data looks like in the newpeople.csv
+ 4. Label new data. In this Gild_challengage folder, there's raw csv called newpeople.csv. That's the new data we want to add. Based on the note in [probablepeople](https://github.com/datamade/probablepeople)'s page, parserator doesn't need a lot of new example to learn about the new label. This is what the data looks like in the newpeople.csv
 ```
 Molly Scott
 Steven St.Claire
@@ -64,7 +65,7 @@ What is 'der' ? If Surname hit return
 What is 'woodsen' ? If Surname hit return
 6
 ```
-5. Re-train and use it! 
+ 5. Re-train and use it! 
 ```
 train name_data/labeled/labeled.xml probablepeople
 ```
