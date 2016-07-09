@@ -17,8 +17,8 @@ I was able to pass all the test in the test set. I was using this moudule called
  
  2. Another thing need to be fixed: downgrade the parserator to version 0.4.1 because the parserator installed with probablepepople is  5.0+  only that specific commit number probablepeople and 0.4.1 parserator together works (ugh I know!) 
     ```
-   pip unintall parserator
-   pip intall parserator==0.4.1
+   pip uninstall parserator
+   pip install parserator==0.4.1
     ```  
 
  3. Do a test train with existing data
