@@ -1,7 +1,16 @@
-## Gild_challange
+## Gild_challenge
 
 I was able to pass all the test in the test set. I was using this moudule called [probablepeople](https://github.com/datamade/probablepeople) becasue it uses uses [parserator](https://github.com/datamade/parserator), a library for making and improving probabilistic parsers - specifically, parsers that use python-crfsuite's implementation of conditional random fields.Therefore, I was able to customize and added more example and train the moudule. 
-**However, the train function in the most updated version of probablepeople is broken, so in order to get what I got, please bare with me and do the following step set up the moudule.**
+
+## Following are steps to set up probablepeople and test my script
+
+1. clone Gild_challenge and submodule probablepeople to your local machine
+
+ ```
+ git clone --recursive https://github.com/oliviac12/Gild_challenge.git 
+ cd Gild_challenge
+    
+ 
 
 ## How to set up probablepeople and train the new examples
 
