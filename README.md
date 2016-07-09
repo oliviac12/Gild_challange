@@ -30,7 +30,7 @@ if no error pops up and you see something like this
 "done training! model file created: probablepeople/learned_settings.crfsuite"
 then we are half way there!
 
- 4. Label new data. In this Gild_challengage folder, there's raw csv called newpeople.csv. That's the new data we want to add. Based on the note in [probablepeople](https://github.com/datamade/probablepeople)'s page, parserator doesn't need a lot of new example to learn about the new label. This is what the data looks like in the newpeople.csv
+ 4. Label new data. In this Gild_challengage folder, there's raw csv called newpeople.csv. Copy paste it to the probablepeople folder. That's the new data we want to add. Based on the note in [probablepeople](https://github.com/datamade/probablepeople)'s page, parserator doesn't need a lot of new example to learn about the new label. This is what the data looks like in the newpeople.csv
   ```
   Molly Scott
   Steven St.Claire
@@ -69,9 +69,10 @@ Labeling example: (there's a list for tag with numbers to choose from, i.e. Give
 ```
 train name_data/labeled/labeled.xml probablepeople
 ```
-After train sussusfully, make sure you have pytest installed and run 
+After train sussusfully, cd back to the Gild_challange folder, make sure you have pytest installed and run 
 ```
 py.test -v test_name_parsing.py
 ```
 
 
+ 6. But... does this a bit arbitrary? What I did is basically telling the moudule that I want molly to be labeled as first name and scott as last name. I mock up a dataset with random people name and job title and test my method again. 
