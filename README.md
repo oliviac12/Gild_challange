@@ -67,7 +67,7 @@ Labeling example: (there's a list for tag with numbers to choose from, i.e. Give
   ```
  5. Re-train and use it! 
 ```
-train name_data/labeled/labeled.xml probablepeople
+parserator train name_data/labeled/labeled.xml probablepeople
 ```
 After train sussusfully, cd back to the Gild_challange folder, make sure you have pytest installed and run 
 ```
