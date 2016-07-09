@@ -74,5 +74,8 @@ After train sussusfully, cd back to the Gild_challange folder, make sure you hav
 py.test -v test_name_parsing.py
 ```
 
-
-  6. But... does this a bit arbitrary? What I did is basically telling the moudule that I want molly to be labeled as first name and scott as last name. So I mocked up a dataset with random people name and job title and test my method again. It's the test.py and test_data.csv. The AUC is about 93% 
+6. But... does this a bit arbitrary? What I did is basically telling the moudule that I want molly to be labeled as first name and scott as last name. So I mocked up a dataset with random people name and job title and test my method again. It's the test.py and test_data.csv. The AUC is about 93% 
+ 
+7. I know that my method is pretty naive and straighforward, but I tried some other NLP tools like standford NER and NLTK stuff, doesn't seem working that well and I think it has something to do with the fact that I am dealing with short content here instead of artilces/paragraphs
+ 
+ 
