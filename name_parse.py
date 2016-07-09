@@ -16,14 +16,14 @@ class NameParse(object):
         '''
         custom_sent_tokenize = PunktSentenceTokenizer()
         text_file = open("title.txt", "r")
-        title = text_file.read().split(',')
+        title = text_file.read().split(',') #the file I used to detect job title
         name = self.name.replace('. ', '.').lower()
         tokenized = custom_sent_tokenize.tokenize(name)
         for i in tokenized:
             words = nltk.word_tokenize(i)
-            jobtil = list(set(words)&set(title))
+            jobtil = list(set(words)&set(title)) #see if there'a s job keyword in the string
             if len(jobtil) != 0:
-                if ',' in words:
+                if ',' in words: #if there's a comma in the string, very likely that seperate the job and name
                     if words.index(jobtil[0]) < words.index(','):
                         newstr = name.split(',')[1]
                     else:
