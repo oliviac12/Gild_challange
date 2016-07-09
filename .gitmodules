@@ -1,0 +1,3 @@
+[submodule "probablepeople"]
+	path = probablepeople
+	url = https://github.com/oliviac12/probablepeople.git
