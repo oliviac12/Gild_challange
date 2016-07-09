@@ -17,7 +17,7 @@ class NameParse(object):
         custom_sent_tokenize = PunktSentenceTokenizer()
         text_file = open("title.txt", "r")
         title = text_file.read().split(',')
-        name = self.name.replace('. ', '.')
+        name = self.name.replace('. ', '.').lower()
         tokenized = custom_sent_tokenize.tokenize(name)
         for i in tokenized:
             words = nltk.word_tokenize(i)
@@ -34,14 +34,17 @@ class NameParse(object):
                     else:
                         newstr = ' '.join(words[words.index(jobtil[0])+1:])
                 self.ppname(newstr)
-                
+
 
             else:
                 self.ppname(name)
-                
+
     def ppname(self, text):
         parsed_name = pp.parse(text)
         inv_parsed_name = {v: k for k, v in dict(parsed_name).items()}
-        first_name = inv_parsed_name['GivenName']
-        last_name = inv_parsed_name['Surname'].strip(',')
-        self.parsed_name = (first_name, last_name.replace('.', '. '))
+        try:
+            first_name = inv_parsed_name['GivenName']
+            last_name = inv_parsed_name['Surname'].strip(',')
+            self.parsed_name = (first_name, last_name.replace('.', '. '))
+        except Exception as e:
+            print str(e)
