@@ -21,7 +21,7 @@ I was able to pass all the test in the test set. I was using this moudule called
    pip intall parserator==0.4.1
     ```  
 
- 3. Do a test train
+ 3. Do a test train with existing data
    ```
    parserator train name_data/labeled/labeled.xml,name_data/labeled/company_labeled.xml probablepeople
     ```  
@@ -75,4 +75,4 @@ py.test -v test_name_parsing.py
 ```
 
 
- 6. But... does this a bit arbitrary? What I did is basically telling the moudule that I want molly to be labeled as first name and scott as last name. I mock up a dataset with random people name and job title and test my method again. 
+  6. But... does this a bit arbitrary? What I did is basically telling the moudule that I want molly to be labeled as first name and scott as last name. So I mocked up a dataset with random people name and job title and test my method again. It's the test.py and test_data.csv. The AUC is about 93% 
