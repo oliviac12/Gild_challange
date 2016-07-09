@@ -21,7 +21,7 @@ I was able to pass all the test in the test set. I was using this moudule called
    pip intall parserator==0.4.1
     ```  
 
- 3. Do a test train
+ 3. Do a test train with existing data
    ```
    parserator train name_data/labeled/labeled.xml,name_data/labeled/company_labeled.xml probablepeople
     ```  
