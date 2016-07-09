@@ -75,4 +75,4 @@ py.test -v test_name_parsing.py
 ```
 
 
- 6. But... does this a bit arbitrary? What I did is basically telling the moudule that I want molly to be labeled as first name and scott as last name. So I mocked up a dataset with random people name and job title and test my method again. It's the test.py and test_data.csv. The AUC is about 93% 
+  6. But... does this a bit arbitrary? What I did is basically telling the moudule that I want molly to be labeled as first name and scott as last name. So I mocked up a dataset with random people name and job title and test my method again. It's the test.py and test_data.csv. The AUC is about 93% 
