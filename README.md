@@ -13,6 +13,7 @@ I was able to pass all the test in the test set. I was using this moudule called
    $ python setup.py develop
    ```
 2. Another thing need to be fixed: downgrade the parserator to version 0.4.1 because the parserator installed with probablepepople is  5.0+ , it doesn't work with the train command we are using next step (ugh I know!) 
+  
     ```
    $ pip uninstall parserator
    $ pip install parserator==0.4.1
@@ -37,10 +38,10 @@ then we are almost there.
 
 ## How to train the module with new examples in the future (how did I do it as an example here)
 
- 1-3 steps are same as the previous part
+ 1.-3. steps are same as the previous part
  
  
- 4. After the test training ran successfully, label new data. In this probablepeople folder, there's raw csv called newpeople.csv. That's the new data I wanted to add. Based on the note in [probablepeople](https://github.com/datamade/probablepeople)'s page, parserator doesn't need a lot of new example to learn about the new label. This is what the data looks like in the newpeople.csv
+  4. After the test training ran successfully, label new data. In this probablepeople folder, there's raw csv called newpeople.csv. That's the new data I wanted to add. Based on the note in [probablepeople](https://github.com/datamade/probablepeople)'s page, parserator doesn't need a lot of new example to learn about the new label. This is what the data looks like in the newpeople.csv
   ```
   Molly Scott
   Steven St.Claire
@@ -75,7 +76,7 @@ Labeling example: (there's a list for tag with numbers to choose from, i.e. Give
   What is 'woodsen' ? If Surname hit return
   6
   ```
- 5. Re-train and test the performance! 
+  5. Re-train and test the performance! 
 ```
 parserator train name_data/labeled/labeled.xml probablepeople
 ```
